@@ -8,17 +8,18 @@ import { useRecoilState } from "recoil";
 import { themeState } from "../../styles/atoms/theme";
 const links = [
     {
-        link: "/",
+        link: "#home",
         text: "Home"
     },
     {
-        link: "/contact",
-        text: "Contact"
+        link: "#learn-more",
+        text: "Learn More"
     },
     {
-        link: "/learn-more",
-        text: "Learn More"
+        link: "#contact-us",
+        text: "Contact"
     }
+    
 ]
 
 export default function Navbar(props) {

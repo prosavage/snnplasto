@@ -3,7 +3,7 @@ import Product from "./Product";
 
 function LearnMore() {
   return (
-    <Wrapper>
+    <Wrapper id={"learn-more"}>
       <Content>
         <Product />
         <Product />

@@ -6,7 +6,7 @@ import Image from "next/image";
 function Header() {
   return (
     <>
-      <Wrapper>
+      <Wrapper id={"home"}>
         <Text>
           <h1>
             <HeroTextGreen>RECYCLED</HeroTextGreen> <br /> PLASTICS

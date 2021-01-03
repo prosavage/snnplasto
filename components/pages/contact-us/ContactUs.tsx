@@ -3,7 +3,7 @@ import { Button } from "../../ui/Button";
 
 function ContactUs() {
   return (
-    <Wrapper>
+    <Wrapper id={"contact-us"}>
       <h1>CONTACT US</h1>
       <Form>
         <Content>
