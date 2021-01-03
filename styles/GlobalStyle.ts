@@ -9,6 +9,8 @@ const GlobalStyle = createGlobalStyle`
         background: ${(props: PropsTheme) => props.theme.background};
         padding: 0;
         margin: 0;
+
+        overflow-x: hidden;
         font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
             Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     }
@@ -32,7 +34,12 @@ const GlobalStyle = createGlobalStyle`
         font-size: 70px;
     }
 
+    input, textarea, select {
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 10px 5px;
+    }
 
-`
+`;
 
 export default GlobalStyle;

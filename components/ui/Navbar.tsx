@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import { useState, useEffect } from "react";
-import DarkTheme from "../../styles/theme/DarkTheme";
 import LightTheme from "../../styles/theme/LightTheme";
 import PropsTheme from "../../styles/theme/PropsTheme";
 import ActiveLink from "./../ActiveLink"
@@ -13,12 +12,12 @@ const links = [
         text: "Home"
     },
     {
-        link: "/faq",
-        text: "FAQ"
-    },
-    {
         link: "/contact",
         text: "Contact"
+    },
+    {
+        link: "/learn-more",
+        text: "Learn More"
     }
 ]
 
@@ -26,9 +25,6 @@ export default function Navbar(props) {
 
     const [theme, setTheme] = useRecoilState(themeState);
 
-    const getLogoPath = () => {
-        return theme === DarkTheme ? "logo-dark.svg" : "logo-light.svg"
-    }
 
     const [toggled, setToggled] = useState(false);
     const [width, setWidth] = useState(0);
@@ -54,7 +50,7 @@ export default function Navbar(props) {
         <Wrapper>
             <Content>
                 <LogoSection>
-                    <Logo src={`/img/navbar/${getLogoPath()}`} />
+                    <h2>SNN<GreenSpan>Plasto</GreenSpan></h2>
                     {!isDesktop() && <HamburgerButton onClick={() => setToggled(!toggled)} />}
                 </LogoSection>
                 {(toggled || isDesktop()) && <LinksWrapper>
@@ -62,9 +58,10 @@ export default function Navbar(props) {
                         <ActiveLink href={entry.link}>
                             <LinkText>{entry.text}</LinkText>
                         </ActiveLink>
-                    </LinkWrapper>).concat(<LinkWrapper onClick={() => setTheme(theme === DarkTheme ? LightTheme : DarkTheme)}>
-                        {theme === DarkTheme ? <Moon /> : <Sun />}
                     </LinkWrapper>)
+                    // .concat(<LinkWrapper onClick={() => setTheme(theme === DarkTheme ? LightTheme : DarkTheme)}>
+                    //     {theme === DarkTheme ? <Moon /> : <Sun />}
+                    // </LinkWrapper>)
                     }
                 </LinksWrapper>}
             </Content>
@@ -82,14 +79,10 @@ const Wrapper = styled.div`
 
     /* Want a line instead of shadow in dark mode. */
     background: ${(props: PropsTheme) => props.theme.background};
-    ${props => props.theme === DarkTheme && css`
-        border-bottom: 1px solid #333;
-        background: black;
-    `}
-    /* Box shadow for light mode. */
-    ${(props: PropsTheme) => props.theme === LightTheme && css`
-        box-shadow: 0px 18px 35px ${props => props.theme.boxShadowColor};
-    `}
+`
+
+const GreenSpan = styled.span`
+    color: #5CA971;
 `
 
 const Content = styled.div`

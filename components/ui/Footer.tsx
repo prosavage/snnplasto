@@ -1,6 +1,4 @@
 import styled, { css } from 'styled-components';
-import DarkTheme from '../../styles/theme/DarkTheme';
-import LightTheme from '../../styles/theme/LightTheme';
 import PropsTheme from '../../styles/theme/PropsTheme';
 import Link from "next/link";
 
@@ -27,14 +25,6 @@ const Wrapper = styled.div`
 
     /* Want a line instead of shadow in dark mode. */
     background: ${(props: PropsTheme) => props.theme.background};
-    ${props => props.theme === DarkTheme && css`
-        border-top: 1px solid #333;
-        background: black;
-    `}
-    /* Box shadow for light mode. */
-    ${(props: PropsTheme) => props.theme === LightTheme && css`
-        box-shadow: 0px -18px 35px ${props => props.theme.boxShadowColor};
-    `}
 
     display: flex;
     flex-direction: row;
