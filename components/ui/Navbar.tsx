@@ -6,18 +6,23 @@ import ActiveLink from "./../ActiveLink"
 import { Moon, Sun } from "react-feather";
 import { useRecoilState } from "recoil";
 import { themeState } from "../../styles/atoms/theme";
+import { Router, useRouter } from "next/router";
 const links = [
     {
-        link: "#home",
+        link: "/",
         text: "Home"
     },
     {
-        link: "#learn-more",
+        link: "/#learn-more",
         text: "Learn More"
     },
     {
-        link: "#contact-us",
+        link: "/#contact-us",
         text: "Contact"
+    },
+    {
+        link: "/aboutus",
+        text: "About Us"
     }
     
 ]
@@ -26,6 +31,7 @@ export default function Navbar(props) {
 
     const [theme, setTheme] = useRecoilState(themeState);
 
+    const router = useRouter();
 
     const [toggled, setToggled] = useState(false);
     const [width, setWidth] = useState(0);
@@ -50,7 +56,7 @@ export default function Navbar(props) {
     return (
         <Wrapper>
             <Content>
-                <LogoSection>
+                <LogoSection onClick={() => router.push("/")}>
                     <Logo src="/img/navbar/logo.png" alt=""/>
                     {!isDesktop() && <HamburgerButton onClick={() => setToggled(!toggled)} />}
                 </LogoSection>
@@ -107,6 +113,7 @@ const LogoSection = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    cursor: pointer;
 
     @media(min-width: 700px) {
         justify-content: center;
