@@ -5,9 +5,9 @@ function LearnMore() {
   return (
     <Wrapper id={"learn-more"}>
       <Content>
-        <Product />
-        <Product />
-        <Product />
+        <Product title={"Recycled PET"} description={"A very cool product description that you guys need to decide on."} image={"/img/learn-more/product.jpg"} />
+        <Product title={"Recycled PET"} description={"A very cool product description that you guys need to decide on."} image={"/img/learn-more/product.jpg"} />
+        <Product title={"Recycled PET"} description={"A very cool product description that you guys need to decide on."} image={"/img/learn-more/product.jpg"} />
       </Content>
       <Wave2 src="/img/learn-more/wave2.svg" alt="" />
     </Wrapper>

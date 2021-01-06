@@ -40,9 +40,10 @@ const Text = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 
   @media(max-width: 1000px) {
-    justify-content: center;
     align-items: center;
     width: 100%;
   }
@@ -61,7 +62,8 @@ const SubText = styled.h2`
 
 const HeroButton = styled(Button)`
   margin: 25px 0;
-  max-width: 250px;
+  max-width: 350px;
+
 `;
 
 const HeroImage = styled.img`
