@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
 
         overflow-x: hidden;
-        font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
             Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     }
 
@@ -32,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
 
     h1 {
         font-size: 70px;
+        line-height: 65px;
     }
 
     input, textarea, select {

@@ -39,8 +39,9 @@ const Wrapper = styled.div`
 const Text = styled.div`
   display: flex;
   flex-direction: column;
+  text-align: center;
 
-  @media(max-width: 700px) {
+  @media(max-width: 1000px) {
     justify-content: center;
     align-items: center;
     width: 100%;

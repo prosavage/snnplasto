@@ -3,10 +3,9 @@ import { useState, useEffect } from "react";
 import LightTheme from "../../styles/theme/LightTheme";
 import PropsTheme from "../../styles/theme/PropsTheme";
 import ActiveLink from "./../ActiveLink"
-import { Moon, Sun } from "react-feather";
 import { useRecoilState } from "recoil";
 import { themeState } from "../../styles/atoms/theme";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 const links = [
     {
         link: "/",
