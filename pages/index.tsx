@@ -23,4 +23,5 @@ const Wrapper = styled.div`
 
 const Wave = styled.img`
   width: 100%;
+  margin-top: -4em;
 `;
