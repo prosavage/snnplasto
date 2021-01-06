@@ -51,7 +51,7 @@ export default function Navbar(props) {
         <Wrapper>
             <Content>
                 <LogoSection>
-                    <h2>SNN<GreenSpan>Plasto</GreenSpan></h2>
+                    <Logo src="/img/navbar/logo.png" alt=""/>
                     {!isDesktop() && <HamburgerButton onClick={() => setToggled(!toggled)} />}
                 </LogoSection>
                 {(toggled || isDesktop()) && <LinksWrapper>
@@ -81,6 +81,7 @@ const Wrapper = styled.div`
     /* Want a line instead of shadow in dark mode. */
     background: ${(props: PropsTheme) => props.theme.background};
 `
+
 
 const GreenSpan = styled.span`
     color: #5CA971;
@@ -122,7 +123,7 @@ const HamburgerButton = styled.div`
 
 const Logo = styled.img`
     width: auto;
-    height: 3em;
+    height: 5em;
     padding: 10px;
 `
 const LinkWrapper = styled.div`
