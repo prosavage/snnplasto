@@ -12,8 +12,7 @@ function Header() {
             <HeroTextGreen>RECYCLED</HeroTextGreen> <br /> PLASTICS
           </h1>
           <SubText>
-            Your partner in RPET and other cool stuff & PET Flake
-            delivery.
+            Your partner in Recycling World
           </SubText>
           <HeroButton>
             <h2>Contact Us</h2>
