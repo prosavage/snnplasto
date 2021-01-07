@@ -12,7 +12,7 @@ function Header() {
             <HeroTextGreen>RECYCLED</HeroTextGreen> <br /> PLASTICS
           </h1>
           <SubText>
-            Your partner in Recycling World
+            Your partner in a Recycling World
           </SubText>
           <HeroButton>
             <h2>Contact Us</h2>
